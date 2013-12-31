@@ -4,7 +4,7 @@ Package.describe({
 
 Package.on_use(function(api){
     api.use([
-    'iron-router'
+    'iron-router', 'session', 'underscore'
     ], 'client');
 
     api.add_files([
