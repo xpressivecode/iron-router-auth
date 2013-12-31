@@ -25,7 +25,7 @@ setting up automatic redirection on a successful login
 If you want to have the module automatically redirect your users back to where they initially attempted to visit, but were restricted due to the `loginRequired` property, simply
 pass the `redirectOnLogin` property to the route options. It is a `Boolean` value type.
 
-```
+```js
 Router.map(function(){
     this.route('login', {
         path: '/login',
