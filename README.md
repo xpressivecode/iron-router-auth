@@ -8,7 +8,7 @@ requiring authentication for your route
 
 You can set this up on your route by passing the `loginRequired` property to the route options. The value needs to be the name of your route used for logging in.
 
-```
+```js
 Router.map(function(){
     this.route('dashboard', {
         path: '/dashboard',
@@ -40,7 +40,7 @@ How this works: when you use the `loginRequired` property, the module will set a
 
 You can manually accomplish the same thing if you want by accessing the value yourself via 
 
-```
+```js
 var url = Session.get('ir.loginRedirectRoute');
 return Router.go(url);
 //or if you are already in a controller action
