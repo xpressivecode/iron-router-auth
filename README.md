@@ -6,15 +6,31 @@ Extends the iron-router package, allowing you to quickly lock routes down to aut
 requiring authentication for your route
 =======================================
 
-You can set this up on your route by passing the `loginRequired` property to the route options. The value needs to be the name of your route used for logging in.
+You can set this up on your route by passing the `loginRequired` property to the route options. The value needs to be the name of your route used for logging in. This value can either be a string that represents your route name. In this scenario the users will be redirected to the route. If however you use the more verbose approach, you can choose to simply render the view while keeping the current url path.
 
 ```js
+//easiest method
 Router.map(function(){
     this.route('dashboard', {
         path: '/dashboard',
         loginRequired: 'login'
     });
     
+    ...
+});
+
+//more verbose, allowing you to set not only the view to render, but the layout if you need to switch it
+//the layout and view only works when you set shouldRoute to false
+Router.map(function(){
+   this.route('dashboard', {
+        path: '/dashboard',
+        loginRequired: {
+            name: 'login',          //name of view/template to render, aka route.template
+            shouldRoute: false,     //render instead of redirect,keeps your url intact (defaults to true)
+            layout: 'main'          //allows you to specify a different layout, in case your auth vs anonymous pages use different layouts
+        }
+    });
+
     ...
 });
 ```
