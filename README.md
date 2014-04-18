@@ -63,4 +63,20 @@ return Router.go(url);
 return this.redirect(url);
 ```
 
+extending the method that checks to see if the user is logged in
+================================================================
 
+You are now able to override the default behaviour of the method that checks to see if the user is logged in. To do so, define your own method and assign it to the `isLoggedIn` option. 
+
+```js
+Router.map(function(){
+    this.route('dashboard', {
+        path: '/',
+        loginRequired: true,
+        isLoggedIn: function(){
+          ...
+          //place custom logic here, maybe for roles etc. 
+        }
+    });
+});
+```
