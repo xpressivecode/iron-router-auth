@@ -3,7 +3,7 @@
     "description": "An iron-router module that gives you the ability to configure your routes so that only allow authenticated users may access them",
     "homepage": "https://github.com/XpressiveCode/iron-router-auth",
     "author": "Mike Fitzgerald (https://github.com/xpressivecode)",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "git": "https://github.com/XpressiveCode/iron-router-auth.git",
     "packages": {
     	"iron-router": {}
