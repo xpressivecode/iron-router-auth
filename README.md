@@ -3,6 +3,27 @@ iron-router-auth
 
 Extends the iron-router package, allowing you to quickly lock routes down to authenticated users. It also provides the ability to auto-redirect back to the previous route on a successful login.
 
+customizing the authentication logic
+====================================
+
+You can now customize the authentication logic by overriding the `isLoggedIn` method. It defaults to
+
+```js
+return (Meteor.user() !== null);
+```
+
+An example implementation
+
+```js
+loginRequired: {
+  name: 'login',
+  shouldRoute: false,
+  isLoggedIn = function(){
+    return (Meteor.user() !== null) && (...); //custom logic here
+  }
+}
+```
+
 requiring authentication for your route
 =======================================
 
