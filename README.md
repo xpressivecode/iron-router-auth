@@ -1,7 +1,3 @@
-I'm fixing the compatibility issue to meteor 0.9.x right now.
-Do not use this package yet if you see this message!!!
-
-
 iron-router-auth
 ================
 
