@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "An iron-router module that gives you the ability to configure your routes so that only allow authenticated users may access them"
+    summary: "Fixed version",
     version: "1.0.0",
     git: "https://github.com/fuatsengul/iron-router-auth"
     
@@ -8,7 +8,7 @@ Package.describe({
 Package.on_use(function(api){
     api.versionsFrom('METEOR@0.9.0.1');
     api.use([
-    'iron:router', 'session', 'underscore'
+    'iron:router@0.9.1', 'session@1.0.0', 'underscore@1.0.0'
     ], 'client');
 
     api.addFiles([
