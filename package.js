@@ -3,11 +3,12 @@ Package.describe({
 });
 
 Package.on_use(function(api){
+    api.versionsFrom('METEOR@0.9.0.1');
     api.use([
-    'iron-router', 'session', 'underscore'
+    'iron:router', 'session', 'underscore'
     ], 'client');
 
-    api.add_files([
+    api.addFiles([
         'LICENSE',
         'lib/iron-router-auth.js'
     ], 'client');
